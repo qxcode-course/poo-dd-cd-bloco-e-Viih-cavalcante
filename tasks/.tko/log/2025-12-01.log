@@ -1,0 +1,5 @@
+2025-12-01 16:49:15, MOVE, v:1, k:poo@zoo, mode:DOWN
+2025-12-01 16:49:16, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-01 16:49:17, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:0
+2025-12-01 17:09:13, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:6
+2025-12-01 17:09:14, MOVE, v:1, k:poo@zoo, mode:BACK

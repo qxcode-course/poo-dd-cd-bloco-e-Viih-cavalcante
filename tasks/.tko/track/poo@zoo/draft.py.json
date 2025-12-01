@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-01_16-49-17",
+            "content": "@@ -1,117 +0,0 @@\n-from abc import ABC, abstractmethod%0Aclass animal (ABC):%0A    @abstractmethod%0A def apresentarNome(self):%0A    pass%0A def \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-01_17-09-13",
+            "content": "from abc import ABC, abstractmethod\nclass animal (ABC):\n    @abstractmethod\n def apresentarNome(self):\n    pass\n def ",
+            "lines": "6"
+        }
+    ]
+}
