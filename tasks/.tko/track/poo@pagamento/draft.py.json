@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_16-14-55",
+            "content": "@@ -1,35 +0,0 @@\n-from abc import ABC, abstractmethod\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-02_16-44-29",
+            "content": "@@ -32,585 +32,4 @@\n thod\n-%0Aclass Pagamento(ABC):%0A    def __init__(self, valor: float , descri%C3%A7ao: str):%0A        self.valor: float = valor%0A        self.descri%C3%A7ao = descri%C3%A7ao %0A    def resumo(self) -%3E str:%0A        return f%22pagamento de R$ %7Bself.valor%7D: %7Bself.descri%C3%A7ao%7D%22%0A    def validar_valor(self) -%3E None:%0A        if self.valor%3C= 0:%0A            raise ValueError(%22falhou: valor invalido%22)%0A    @abstractmethod%0A    def processar(self):%0A        pass%0Aclass Cart%C3%A3oCredito(Pagamento)%0A    def __init__(self, num: int, nome: str, limite: float, valor: float, descri%C3%A7ao: str):%0A        super().__init__(valor,descri%C3%A7ao)\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-12-02_17-13-36",
+            "content": "from abc import ABC, abstractmethod\nclass Pagamento(ABC):\n    def __init__(self, valor: float , descri\u00e7ao: str):\n        self.valor: float = valor\n        self.descri\u00e7ao = descri\u00e7ao \n    def resumo(self) -> str:\n        return f\"pagamento de R$ {self.valor}: {self.descri\u00e7ao}\"\n    def validar_valor(self) -> None:\n        if self.valor<= 0:\n            raise ValueError(\"falhou: valor invalido\")\n    @abstractmethod\n    def processar(self):\n        pass\nclass Cart\u00e3oCredito(Pagamento)\n    def __init__(self, num: int, nome: str, limite: float, valor: float, descri\u00e7ao: str):\n        super().__init__(valor,descri\u00e7ao)",
+            "lines": "16"
+        }
+    ]
+}
