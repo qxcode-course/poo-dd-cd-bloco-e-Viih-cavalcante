@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-13_22-09-22",
+            "content": "@@ -1,410 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Veiculo:%0A    def __init(self, id: str, tipo: str):%0A        self.__id: str = id%0A        self._tipo: str = tipo%0A        self._horaEntrada: int = 0%0A%0A    def getld(self) -%3E str:%0A    return self.__id%0Adef main():%0A    estacionamento = Estacionamento()%0A    while True:%0A        linha: str = input()%0A        print(%22$%22 + linh)%0A        args: list %5Bstr%5D = linha.split(%22 %22)%0Amain()%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-15_10-26-26",
+            "content": "@@ -210,20 +210,16 @@\n -%3E str:%0A\n-    \n     retu\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-12-15_10-26-45",
+            "content": "@@ -239,179 +239,8 @@\n _id%0A\n-    def getTipo(self) -%3E str:%0A        return self.__tipo%0A    def setEntrada(self) -%3E int:%0A        return self._horaEntrada%0A    @abstractmethod%0A    def calcaularValor%0A    %0A\n def \n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-12-15_10-32-35",
+            "content": "@@ -390,16 +390,17 @@\n def calc\n+a\n ularValo\n@@ -404,184 +404,13 @@\n alor\n-(self, horaSaida: int) -%3E None:%0A        pass%0A    def __strt__(self) -%3E str:%0A        x = 10 - len(self.__tipo)%0A        y = 10 - len(self.__id)%0A        unders =x * %22_%22%0A        %0A%0A\n+%0A    \n %0Adef\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-12-15_10-42-21",
+            "content": "@@ -577,147 +577,60 @@\n     \n-unders2 = y * %22_%22%0A        return f%22%7Bunders + self._tipo%7D : %7Bunders2 + self.__id%7D : %7Bself._horaEntrada%7D%22%0A%0Aclass Bike(veiculo)%0A%0A%0A%0Adef main\n+%0A%0A%0Adef main():%0A    estacionamento = Estacionamento\n ()\n-:\n %0A   \n@@ -695,17 +695,16 @@\n %22 + linh\n-a\n )%0A      \n@@ -748,9 +748,8 @@\n %0Amain()%0A\n-%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-12-15_11-07-32",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo:\n    def __init(self, id: str, tipo: str):\n        self.__id: str = id\n        self._tipo: str = tipo\n        self._horaEntrada: int = 0\n\n    def getld(self) -> str:\n        return self.__id\n    def getTipo(self) -> str:\n        return self.__tipo\n    def setEntrada(self) -> int:\n        return self._horaEntrada\n    @abstractmethod\n    def calcularValor(self, horaSaida: int) -> None:\n        pass\n    def __strt__(self) -> str:\n        x = 10 - len(self.__tipo)\n        y = 10 - len(self.__id)\n        unders =x * \"_\"\n        unders2 = y * \"_\"\n        return f\"{unders + self._tipo} : {unders2 + self.__id} : {self._horaEntrada}\"\n\nclass Bike(veiculo)\n\n\n\ndef main():\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list [str] = linha.split(\" \")\nmain()\n\n",
+            "lines": "35"
+        }
+    ]
+}
