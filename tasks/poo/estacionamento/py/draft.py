@@ -22,7 +22,19 @@ class Veiculo:
         unders2 = y * "_"
         return f"{unders + self._tipo} : {unders2 + self.__id} : {self._horaEntrada}"
 
-class Bike(veiculo)
+class Bike(veiculo):
+    def __init__(self, id: str):
+        super().__init__(id, "Bike")
+    def calcularValor(self,horaSaida: int):
+        return 3
+class Moto(veiculo):
+    def __init__(self, id: str):
+        super().__init__(id,"Moto")
+    def calcularValor(self, horaSaida: int):
+        tempo = horaSaida - self._horaEntrada
+        tempo /= 20
+        return tempo
+
 
 
 

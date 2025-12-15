@@ -27,8 +27,18 @@
         },
         {
             "label": "2025-12-15_11-07-32",
-            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo:\n    def __init(self, id: str, tipo: str):\n        self.__id: str = id\n        self._tipo: str = tipo\n        self._horaEntrada: int = 0\n\n    def getld(self) -> str:\n        return self.__id\n    def getTipo(self) -> str:\n        return self.__tipo\n    def setEntrada(self) -> int:\n        return self._horaEntrada\n    @abstractmethod\n    def calcularValor(self, horaSaida: int) -> None:\n        pass\n    def __strt__(self) -> str:\n        x = 10 - len(self.__tipo)\n        y = 10 - len(self.__id)\n        unders =x * \"_\"\n        unders2 = y * \"_\"\n        return f\"{unders + self._tipo} : {unders2 + self.__id} : {self._horaEntrada}\"\n\nclass Bike(veiculo)\n\n\n\ndef main():\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list [str] = linha.split(\" \")\nmain()\n\n",
+            "content": "@@ -701,11 +701,8 @@\n ulo)\n-:%0A%0A\n %0A%0A%0A%0A\n",
             "lines": "35"
+        },
+        {
+            "label": "2025-12-15_11-09-07",
+            "content": "@@ -703,360 +703,8 @@\n o):%0A\n-    def __init__(self, id: str):%0A        super().__init__(id, %22Bike%22)%0A    def calcularValor(self,horaSaida: int):%0A        return 3%0Aclass Moto(veiculo):%0A    def __init__(self, id: str):%0A        super().__init__(id,%22Moto%22)%0A    def calcularValor(self, horaSaida: int):%0A        tempo = horaSaida - self._horaEntrada%0A        tempo /= 20%0A        return tempo\n %0A%0A%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-12-15_11-55-52",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo:\n    def __init(self, id: str, tipo: str):\n        self.__id: str = id\n        self._tipo: str = tipo\n        self._horaEntrada: int = 0\n\n    def getld(self) -> str:\n        return self.__id\n    def getTipo(self) -> str:\n        return self.__tipo\n    def setEntrada(self) -> int:\n        return self._horaEntrada\n    @abstractmethod\n    def calcularValor(self, horaSaida: int) -> None:\n        pass\n    def __strt__(self) -> str:\n        x = 10 - len(self.__tipo)\n        y = 10 - len(self.__id)\n        unders =x * \"_\"\n        unders2 = y * \"_\"\n        return f\"{unders + self._tipo} : {unders2 + self.__id} : {self._horaEntrada}\"\n\nclass Bike(veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Bike\")\n    def calcularValor(self,horaSaida: int):\n        return 3\nclass Moto(veiculo):\n    def __init__(self, id: str):\n        super().__init__(id,\"Moto\")\n    def calcularValor(self, horaSaida: int):\n        tempo = horaSaida - self._horaEntrada\n        tempo /= 20\n        return tempo\n\n\n\n\ndef main():\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list [str] = linha.split(\" \")\nmain()\n\n",
+            "lines": "47"
         }
     ]
 }
