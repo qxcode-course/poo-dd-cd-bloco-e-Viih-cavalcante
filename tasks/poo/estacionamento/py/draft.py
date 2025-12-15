@@ -34,6 +34,19 @@ class Moto(veiculo):
         tempo = horaSaida - self._horaEntrada
         tempo /= 20
         return tempo
+class Carro(Veiculo):
+    def __init__(self, horaSaida: int):
+        tempo = horaSaida - self._horaEntrada
+        tempo /= 10
+        if tempo < 5:
+            return 5
+        else:
+            return tempo
+class Estacionamento:
+    def __init__(self):
+        self.__horaAtual: int = 0
+        self.__veiculos: list[Veiculo] = []
+        
 
 
 
