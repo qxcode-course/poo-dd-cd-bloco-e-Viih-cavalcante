@@ -8,9 +8,33 @@ class Pagamento(ABC):
     def validar_valor(self) -> None:
         if self.valor<= 0:
             raise ValueError("falhou: valor invalido")
+        
     @abstractmethod
     def processar(self):
         pass
-class CartãoCredito(Pagamento)
+
+class CartãoCredito(Pagamento):
     def __init__(self, num: int, nome: str, limite: float, valor: float, descriçao: str):
         super().__init__(valor,descriçao)
+        self.num = num
+        self.nome = nome
+        self.limite: float = limite
+    def get_limite(self):
+        return self.limite
+    def processar(self):
+        if self.valor > self.limite:
+            print("pagamento recusado por limite insuficiente")
+            return
+        self.limite -= self.valor
+
+    def processar_pagamento(Pagamento: list[Pagamento]):
+        for pag in Pagamento:
+            pag.validar_valor()
+            print(pag.resumo())
+            pag.processar()
+            if isistance(pag,CartaoCredito):
+                print(pag.pag.get_limite())
+ag: Pagamento = Cartã
+oCredito(nome= "David", descricao="Coxinha", limite=500.00, num=123, valor=0.50)
+pagamentos: list[Pagamento] = [pag]
+processar_pagamentos(pagamentos)

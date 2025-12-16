@@ -1,3 +1,4 @@
+trario ererado
 # Sistema de Pagamentos de um Marketplace
 
 Você deverá implementar um sistema orientado a objetos para processar pagamentos em um marketplace. O sistema deve aceitar diversos **métodos de pagamento**, cada um com regras próprias.
