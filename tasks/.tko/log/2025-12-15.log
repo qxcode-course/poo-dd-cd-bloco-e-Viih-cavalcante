@@ -128,3 +128,13 @@
 2025-12-15 22:53:31, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:116
 2025-12-15 22:54:03, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
 2025-12-15 22:54:04, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 22:59:19, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 22:59:20, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 23:07:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:75, size:117
+2025-12-15 23:13:55, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:100, size:117
+2025-12-15 23:14:02, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 23:16:20, SELF, v:1, k:poo@estacionamento, rate:100, iagen:gemini_me_ajudou_a_encontrar_pequeno_erros, other:pdfs_de_poo_em_outras_linguagens, alone:9, study:480
+2025-12-15 23:16:34, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-15 23:16:37, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-15 23:16:44, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-15 23:16:48, MOVE, v:1, k:poo@pagamento, mode:BACK

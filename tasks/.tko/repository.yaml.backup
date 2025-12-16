@@ -12,13 +12,15 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-12-15 19:04:22'
+  cache_timestamp: '2025-12-15 22:54:52'
   filters:
   - herança
 expanded:
 - poo@campanha-principal
 - poo@bloco_f-herança-i
-tasks: {}
+tasks:
+  poo@estacionamento: '{rate:100, iagen:gemini_me_ajudou_a_encontrar_pequeno_erros,
+    other:pdfs_de_poo_em_outras_linguagens, alone:9, study:480}'
 flags:
   quests: 0
   tracks: 0
@@ -26,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@estacionamento
+selected: poo@pagamento

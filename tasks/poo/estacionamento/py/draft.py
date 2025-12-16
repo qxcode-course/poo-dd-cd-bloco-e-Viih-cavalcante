@@ -63,11 +63,11 @@ class Estacionamento:
         self.__horaAtual: int = 0
         self.__veiculos: list[Veiculo] = []
 
-    def procurarVeiculos(self, id: str) -> int:
-        for i in range(0, len(self.__veiculos)):
-            if self.__veiculos[i].getld() == id:
+    def procurarVeiculo(self, id: str) -> int:
+        for i in range(len(self.__veiculos)):
+            if self.__veiculos[i].getId() == id:
                 return i
-            return -1
+        return -1
         
     def passarTempo(self, tempo: int) -> None:
         self.__horaAtual += tempo
@@ -86,31 +86,32 @@ class Estacionamento:
             return f"{"\n".join(str(x) for x in self.__veiculos)}\nHora atual: {self.__horaAtual}"
         else:
             return f"Hora atual: {self.__horaAtual}"
+        
 def main():
+    estacionamento = Estacionamento()
 
     while True:
-        linha: str = input() 
+        linha = input()
         print("$" + linha)
-        args: list[str] = linha.split(" ")
+        args = linha.split()
+
         if args[0] == "end":
             break
+
         elif args[0] == "show":
-            print(Estacionamento) 
+            print(estacionamento)
+
         elif args[0] == "tempo":
-            Estacionamento.passarTempo(tempo= int(args[1]))   
+            estacionamento.passarTempo(int(args[1]))
+
         elif args[0] == "estacionar":
             if args[1] == "bike":
-                veiculo = Bike(args[2])
-                Estacionamento.estacionar(veiculo)
+                estacionamento.estacionar(Bike(args[2]))
             elif args[1] == "moto":
-                veiculo = Moto(args[2])
-                Estacionamento.estacionar(veiculo)
+                estacionamento.estacionar(Moto(args[2]))
             elif args[1] == "carro":
-                veiculo = Carro(args[2])
-                Estacionamento.estacionar(veiculo)
+                estacionamento.estacionar(Carro(args[2]))
+
         elif args[0] == "pagar":
-            Estacionamento.pagar(args[1])
-
-main()
-
-
+            estacionamento.pagar(args[1])
+main ()
