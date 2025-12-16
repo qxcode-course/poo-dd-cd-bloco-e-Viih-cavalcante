@@ -27,7 +27,22 @@
         },
         {
             "label": "2025-12-16_00-57-04",
-            "content": "from abc import ABC, abstractmethod\nclass Pagamento(ABC):\n    def __init__(self, valor: float , descri\u00e7ao: str):\n        self.valor: float = valor\n        self.descri\u00e7ao = descri\u00e7ao \n    def resumo(self) -> str:\n        return f\"pagamento de R$ {self.valor}: {self.descri\u00e7ao}\"\n    def validar_valor(self) -> None:\n        if self.valor<= 0:\n            raise ValueError(\"falhou: valor invalido\")\n        \n    @abstractmethod\n    def processar(self):\n        pass\n\nclass Cart\u00e3oCredito(Pagamento):\n    def __init__(self, num: int, nome: str, limite: float, valor: float, descri\u00e7ao: str):\n        super().__init__(valor,descri\u00e7ao)\n        self.num = num\n        self.nome = nome\n        self.limite: float = limite\n    def get_limite(self):\n        return self.limite\n    def processar(self):\n        if self.valor > self.limite:\n            print(\"pagamento recusado por limite insuficiente\")\n            return\n        self.limite -= self.valor\n\n    def processar_pagamento(Pagamento: list[Pagamento]):\n        for pag in Pagamento:\n            pag.validar_valor()\n            print(pag.resumo())\n            pag.processar()\n            if isistance(pag,CartaoCredito):\n                print(pag.pag.get_limite())\nag: Pagamento = Cart\u00e3\noCredito(nome= \"David\", descricao=\"Coxinha\", limite=500.00, num=123, valor=0.50)\npagamentos: list[Pagamento] = [pag]\nprocessar_pagamentos(pagamentos)",
+            "content": "@@ -1227,24 +1227,16 @@\n  = Cart%C3%A3\n-oCredito\n %0AoCredit\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-12-16_11-24-53",
+            "content": "@@ -1235,16 +1235,25 @@\n oCredito\n+%0AoCredito\n (nome= %22\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-12-16_11-32-29",
+            "content": "@@ -969,19 +969,18 @@\n ento\n-s(p\n+(P\n agamento\n s: l\n@@ -967,33 +967,32 @@\n amento(Pagamento\n-s\n : list%5BPagamento\n@@ -1014,25 +1014,25 @@\n  pag in \n-p\n+P\n agamento\n s:%0A     \n@@ -1023,17 +1023,16 @@\n agamento\n-s\n :%0A      \n@@ -1135,17 +1135,16 @@\n   if isi\n-n\n stance(p\n@@ -1146,22 +1146,21 @@\n nce(pag,\n- \n Cart\n-%C3%A3\n+a\n oCredito\n@@ -1188,16 +1188,20 @@\n int(pag.\n+pag.\n get_limi\n@@ -1206,18 +1206,16 @@\n mite())%0A\n-%0Ap\n ag: Paga\n@@ -1365,18 +1365,18 @@\n amentos(\n-P\n+p\n agamento\n )\n@@ -1366,17 +1366,18 @@\n mentos(pagamento\n+s\n )\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-12-16_11-40-31",
+            "content": "from abc import ABC, abstractmethod\nclass Pagamento(ABC):\n    def __init__(self, valor: float , descri\u00e7ao: str):\n        self.valor: float = valor\n        self.descri\u00e7ao = descri\u00e7ao \n    def resumo(self) -> str:\n        return f\"pagamento de R$ {self.valor}: {self.descri\u00e7ao}\"\n    def validar_valor(self) -> None:\n        if self.valor<= 0:\n            raise ValueError(\"falhou: valor invalido\")\n        \n    @abstractmethod\n    def processar(self):\n        pass\n\nclass Cart\u00e3oCredito(Pagamento):\n    def __init__(self, num: int, nome: str, limite: float, valor: float, descri\u00e7ao: str):\n        super().__init__(valor,descri\u00e7ao)\n        self.num = num\n        self.nome = nome\n        self.limite: float = limite\n    def get_limite(self):\n        return self.limite\n    def processar(self):\n        if self.valor > self.limite:\n            print(\"pagamento recusado por limite insuficiente\")\n            return\n        self.limite -= self.valor\n\n    def processar_pagamentos(pagamentos: list[Pagamento]):\n        for pag in pagamentos:\n            pag.validar_valor()\n            print(pag.resumo())\n            pag.processar()\n            if isinstance(pag, Cart\u00e3oCredito):\n                print(pag.get_limite())\n\npag: Pagamento = Cart\u00e3oCredito(nome= \"David\", descricao=\"Coxinha\", limite=500.00, num=123, valor=0.50)\npagamentos: list[Pagamento] = [pag]\nprocessar_pagamentos(Pagamento)",
             "lines": "40"
         }
     ]

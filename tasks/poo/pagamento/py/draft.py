@@ -27,14 +27,14 @@ class CartãoCredito(Pagamento):
             return
         self.limite -= self.valor
 
-    def processar_pagamento(Pagamento: list[Pagamento]):
-        for pag in Pagamento:
+    def processar_pagamentos(pagamentos: list[Pagamento]):
+        for pag in pagamentos:
             pag.validar_valor()
             print(pag.resumo())
             pag.processar()
-            if isistance(pag,CartaoCredito):
-                print(pag.pag.get_limite())
-ag: Pagamento = Cartã
-oCredito(nome= "David", descricao="Coxinha", limite=500.00, num=123, valor=0.50)
+            if isinstance(pag, CartãoCredito):
+                print(pag.get_limite())
+
+pag: Pagamento = CartãoCredito(nome= "David", descricao="Coxinha", limite=500.00, num=123, valor=0.50)
 pagamentos: list[Pagamento] = [pag]
-processar_pagamentos(pagamentos)
+processar_pagamentos(Pagamento)
