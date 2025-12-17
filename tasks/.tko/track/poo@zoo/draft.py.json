@@ -12,8 +12,13 @@
         },
         {
             "label": "2025-12-16_11-24-06",
-            "content": "from abc import ABC, abstractmethod\nclass animal (ABC):\n    @abstractmethod\n def apresentarNome(self):\n    pass\n def \"\"",
+            "content": "@@ -29,17 +29,16 @@\n tmethod%0A\n-%0A\n class an\n@@ -54,388 +54,54 @@\n ):%0A \n-def __init__(self, nome: str):%0A   self.__nome: str = nome%0A%0A def apresentarNome(self) -%3E str:%0A    print(f%22Eu sou um(a) %7Bself.__nome%7D!%22)%0A%0A @abstractmethod%0A def fazerSom(self):%0A   pass%0A %0A @abstractmethod%0A def mover(self):%0A   pass%0A %0Aclass Le%C3%A3o(Animal):%0A   def __init__(self, nome: str):%0A    super().__init__(nome)%0A%0A   def fazerSom(self):%0A     print(f%22roawwwwww%22)%0A%0A   def mover\n+   @abstractmethod%0A def apresentarNome\n (self):%0A\n     \n@@ -100,163 +100,20 @@\n f):%0A\n- \n     p\n-rint(f%22azunh%C3%A3o%22)%0A%0A   class Elefante(animal):%0A     def__init__(self, nome: str):%0A     super().__init__(nome)%0A     def fazerSom(self):%0A       print(f%22%22)%0A %0A\n+ass%0A def %22%22\n",
             "lines": "6"
+        },
+        {
+            "label": "2025-12-16_11-56-56",
+            "content": "from abc import ABC, abstractmethod\n\nclass animal (ABC):\n def __init__(self, nome: str):\n   self.__nome: str = nome\n\n def apresentarNome(self) -> str:\n    print(f\"Eu sou um(a) {self.__nome}!\")\n\n @abstractmethod\n def fazerSom(self):\n   pass\n \n @abstractmethod\n def mover(self):\n   pass\n \nclass Le\u00e3o(Animal):\n   def __init__(self, nome: str):\n    super().__init__(nome)\n\n   def fazerSom(self):\n     print(f\"roawwwwww\")\n\n   def mover(self):\n     print(f\"azunh\u00e3o\")\n\n   class Elefante(animal):\n     def__init__(self, nome: str):\n     super().__init__(nome)\n     def fazerSom(self):\n       print(f\"\")\n \n",
+            "lines": "33"
         }
     ]
 }
