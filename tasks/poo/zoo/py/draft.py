@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class animal (ABC):
+class Animal (ABC):
  def __init__(self, nome: str):
    self.__nome: str = nome
 
@@ -25,9 +25,15 @@ class Leão(Animal):
    def mover(self):
      print(f"azunhão")
 
-   class Elefante(animal):
-     def__init__(self, nome: str):
-     super().__init__(nome)
-     def fazerSom(self):
-       print(f"")
+class Elefante(Animal):
+  def __init__(self, nome: str):
+    super().__init__(nome)
+
+  def fazerSom(self):
+    print(f"uuuuuuuurrrmm uuuuuh")
+  def mover(self):
+    print(f"jogar agua")
+class Cobra(Animal):
+  def _init_(self, nome: str):
+    super()._init_(nome)
  
