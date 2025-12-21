@@ -36,4 +36,9 @@ class Elefante(Animal):
 class Cobra(Animal):
   def _init_(self, nome: str):
     super()._init_(nome)
+  def fazerSom(self):
+    print(f"sciiiiiiiiiiiiiiiiiih")
+  def mover(self):
+    print(f"picada")
+  def apresentar(animal: Animal):
  

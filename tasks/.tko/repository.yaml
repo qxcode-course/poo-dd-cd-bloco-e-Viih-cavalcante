@@ -12,18 +12,19 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-12-19 19:57:59'
+  cache_timestamp: '2025-12-20 20:07:52'
   filters:
   - herança
 expanded:
+- poo@bloco_f-herança-i
 - poo@campanha-principal
 - poo@bloco_f-herança-i
 tasks:
   poo@zoo: '{rate:90, alone:10, study:130}'
   poo@pagamento: '{rate:100, guide:aula, alone:9, study:120}'
-  poo@shapes: '{alone:6, study:280}'
+  poo@shapes: '{alone:8, study:490}'
   poo@estacionamento: '{rate:100, iagen:gemini_me_ajudou_a_encontrar_pequeno_erros,
-    other:pdfs_de_poo_em_outras_linguagens, alone:9, study:480}'
+    other:pdfs_de_poo_em_outras_linguagens, alone:10, study:480}'
 flags:
   quests: 0
   tracks: 0
@@ -31,4 +32,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@zoo
+selected: poo@estacionamento
